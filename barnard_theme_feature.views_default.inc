@@ -36,12 +36,12 @@ function barnard_theme_feature_views_default_views() {
   $handler->display->display_options['fields']['dc.title']['table'] = 'islandora_solr';
   $handler->display->display_options['fields']['dc.title']['field'] = 'dc.title';
   $handler->display->display_options['fields']['dc.title']['label'] = 'Featured';
-  $handler->display->display_options['fields']['dc.title']['link_to_object'] = 0;
-  /* Filter criterion: Islandora Solr: PID */
-  $handler->display->display_options['filters']['PID']['id'] = 'PID';
-  $handler->display->display_options['filters']['PID']['table'] = 'islandora_solr';
-  $handler->display->display_options['filters']['PID']['field'] = 'PID';
-  $handler->display->display_options['filters']['PID']['value'] = 'islandora:featured';
+  $handler->display->display_options['fields']['dc.title']['link_to_object'] = 1;
+  /* Filter criterion: Islandora Solr: RELS_EXT_isMemberOfCollection_uri_mt */
+  $handler->display->display_options['filters']['RELS_EXT_isMemberOfCollection_uri_mt']['id'] = 'RELS_EXT_isMemberOfCollection_uri_mt';
+  $handler->display->display_options['filters']['RELS_EXT_isMemberOfCollection_uri_mt']['table'] = 'islandora_solr';
+  $handler->display->display_options['filters']['RELS_EXT_isMemberOfCollection_uri_mt']['field'] = 'RELS_EXT_isMemberOfCollection_uri_mt';
+  $handler->display->display_options['filters']['RELS_EXT_isMemberOfCollection_uri_mt']['value'] = 'islandora:featured';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
